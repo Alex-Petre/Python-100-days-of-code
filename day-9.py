@@ -83,49 +83,49 @@
 # print(travel_log)
 
 
-# import blind_auction_art
-# import os
+import blind_auction_art
+import os
 
-# clear = lambda: os.system('cls')
+clear = lambda: os.system('cls')
 
-# participants = []
+participants = []
 
-# def add_participants(nume, licitare):
-#   new_participants = {}
-#   new_participants[nume] = licitare
-#   participants.append(new_participants)
+def add_participants(nume, licitare):
+  new_participants = {}
+  new_participants[nume] = licitare
+  participants.append(new_participants)
 
 
-# print(blind_auction_art.logo)
-# print("Welcome to the secret auction program.")
+print(blind_auction_art.logo)
+print("Welcome to the secret auction program.")
 
-# continue_auction = True
-# while continue_auction:
+continue_auction = True
+while continue_auction:
 
-#   name_key = input("What is your name?: ")
-#   bid_value = input("What's your bid?: ") 
+  name_key = input("What is your name?: ")
+  bid_value = input("What's your bid?: ") 
 
-#   add_participants(name_key, bid_value)
+  add_participants(name_key, bid_value)
 
-#   other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+  other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n")
 
-#   if other_bidders == "yes":
-#     clear()
-#     continue
-#   elif other_bidders == "no":
-#     continue_auction = False
-#   else:
-#     print("Please select only 'yes' or 'no'.")
-#     continue
+  if other_bidders == "yes":
+    clear()
+    continue
+  elif other_bidders == "no":
+    continue_auction = False
+  else:
+    print("Please select only 'yes' or 'no'.")
+    continue
 
-# winner = ''
-# money = 0
-# for participant in participants:
-#  for bidder in participant:
-#     value = int(participant[bidder])
-#     if value > money:
-#       money = value
-#       winner = bidder
-#       money = value
+winner = ''
+money = 0
+for participant in participants:
+ for bidder in participant:
+    value = int(participant[bidder])
+    if value > money:
+      money = value
+      winner = bidder
+      money = value
 
-# print(f"The winner is {winner} with a bid of {money} lei.")
+print(f"The winner is {winner} with a bid of {money} lei.")
